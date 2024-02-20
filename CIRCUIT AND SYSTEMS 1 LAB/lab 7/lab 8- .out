@@ -1,0 +1,114 @@
+
+**** 06/15/22 22:39:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2nd semester\CIRCUIT AND SYSTEMS 1 LAB\lab 7\lab 8- .sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Jun 15 22:39:48 2022
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "lab 8- .net"
+
+**** INCLUDING "lab 8- .net" ****
+* Schematics Netlist *
+
+
+
+R_R13         $N_0002 $N_0001  2  
+V_V6         $N_0002 0 10V
+R_R17         $N_0004 $N_0003  2  
+R_R16         $N_0001 $N_0003  10  
+R_R15         0 $N_0004  5  
+R_R14         $N_0002 $N_0004  8  
+R_R         0 $N_0003  25  
+
+**** RESUMING "lab 8- .cir" ****
+.INC "lab 8- .als"
+
+
+
+**** INCLUDING "lab 8- .als" ****
+* Schematics Aliases *
+
+.ALIASES
+R_R13           R13(1=$N_0002 2=$N_0001 )
+V_V6            V6(+=$N_0002 -=0 )
+R_R17           R17(1=$N_0004 2=$N_0003 )
+R_R16           R16(1=$N_0001 2=$N_0003 )
+R_R15           R15(1=0 2=$N_0004 )
+R_R14           R14(1=$N_0002 2=$N_0004 )
+R_R             R(1=0 2=$N_0003 )
+.ENDALIASES
+
+
+**** RESUMING "lab 8- .cir" ****
+.probe
+
+
+.END
+
+**** 06/15/22 22:39:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2nd semester\CIRCUIT AND SYSTEMS 1 LAB\lab 7\lab 8- .sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    9.1611                   ($N_0002)   10.0000                       
+
+($N_0003)    4.9669                   ($N_0004)    4.5254                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V6        -1.104E+00
+
+    TOTAL POWER DISSIPATION   1.10E+01  WATTS
+
+
+**** 06/15/22 22:39:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2nd semester\CIRCUIT AND SYSTEMS 1 LAB\lab 7\lab 8- .sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

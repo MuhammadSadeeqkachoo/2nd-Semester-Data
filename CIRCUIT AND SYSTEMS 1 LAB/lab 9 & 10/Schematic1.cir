@@ -1,0 +1,22 @@
+* D:\2nd semester\CIRCUIT AND SYSTEMS 1 LAB\lab 9 & 10\Schematic1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Jun 15 19:20:36 2022
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+.INC "Schematic1.als"
+
+
+.probe
+
+
+.END

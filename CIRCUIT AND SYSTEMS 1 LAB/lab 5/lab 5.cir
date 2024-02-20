@@ -1,0 +1,22 @@
+* D:\2nd semester\CIRCUIT AND SYSTEMS 1 LAB\lab 5\lab 5.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Wed May 18 22:47:59 2022
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "lab 5.net"
+.INC "lab 5.als"
+
+
+.probe
+
+
+.END

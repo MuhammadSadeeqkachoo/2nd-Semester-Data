@@ -1,0 +1,142 @@
+
+**** 06/26/22 16:18:10 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2nd semester\CIRCUIT AND SYSTEMS 1 LAB\lab 7\LAB 11.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Jun 26 16:10:34 2022
+
+
+
+** Analysis setup **
+.tran 0ns 1000000ns SKIPBP
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "LAB 11.net"
+
+**** INCLUDING "LAB 11.net" ****
+* Schematics Netlist *
+
+
+
+V_V1         $N_0001 0 20V
+R_R1         $N_0003 $N_0002  10  
+C_C1         0 $N_0002  10u  
+X_U1         $N_0001 $N_0003 Sw_tClose PARAMS: tClose=0.1ms ttran=1u
++  Rclosed=0.01 Ropen=1Meg
+
+**** RESUMING "LAB 11.cir" ****
+.INC "LAB 11.als"
+
+
+
+**** INCLUDING "LAB 11.als" ****
+* Schematics Aliases *
+
+.ALIASES
+V_V1            V1(+=$N_0001 -=0 )
+R_R1            R1(1=$N_0003 2=$N_0002 )
+C_C1            C1(1=0 2=$N_0002 )
+X_U1            U1(1=$N_0001 2=$N_0003 )
+.ENDALIASES
+
+
+**** RESUMING "LAB 11.cir" ****
+.probe
+
+
+.END
+
+**** 06/26/22 16:18:10 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2nd semester\CIRCUIT AND SYSTEMS 1 LAB\lab 7\LAB 11.sch
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.Smod       
+         RON     .01         
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+**** 06/26/22 16:18:10 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2nd semester\CIRCUIT AND SYSTEMS 1 LAB\lab 7\LAB 11.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(X_U1.3)    0.0000 ($N_0001)   20.0000                   ($N_0002)   20.0000    
+
+($N_0003)   20.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.000E-17
+    X_U1.V1      0.000E+00
+
+    TOTAL POWER DISSIPATION   4.00E-16  WATTS
+
+
+**** 06/26/22 16:18:10 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2nd semester\CIRCUIT AND SYSTEMS 1 LAB\lab 7\LAB 11.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE CONTROLLED SWITCHES
+
+
+NAME         X_U1.S1   
+MODEL        X_U1.Smod 
+I LOAD       2.00E-17 
+V LOAD       2.00E-11 
+R LOAD       1.00E+06 
+V CTRL       0.00E+00 
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

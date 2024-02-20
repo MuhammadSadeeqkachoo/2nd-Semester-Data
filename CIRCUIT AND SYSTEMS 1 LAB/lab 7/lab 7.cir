@@ -1,0 +1,22 @@
+* C:\Users\SADEEQ KACHOO\Desktop\lab 7\lab 7.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu May 26 13:03:35 2022
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "lab 7.net"
+.INC "lab 7.als"
+
+
+.probe
+
+
+.END

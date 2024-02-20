@@ -1,0 +1,22 @@
+* D:\2nd semester\CIRCUIT AND SYSTEMS 1 LAB\lab 7\lab 8- .sch
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Jun 15 22:39:48 2022
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "lab 8- .net"
+.INC "lab 8- .als"
+
+
+.probe
+
+
+.END

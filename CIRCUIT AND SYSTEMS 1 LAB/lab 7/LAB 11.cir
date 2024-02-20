@@ -1,0 +1,23 @@
+* D:\2nd semester\CIRCUIT AND SYSTEMS 1 LAB\lab 7\LAB 11.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Jun 26 16:10:34 2022
+
+
+
+** Analysis setup **
+.tran 0ns 1000000ns SKIPBP
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "LAB 11.net"
+.INC "LAB 11.als"
+
+
+.probe
+
+
+.END

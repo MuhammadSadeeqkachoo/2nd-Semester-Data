@@ -1,0 +1,106 @@
+
+**** 05/25/22 21:42:40 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2nd semester\CIRCUIT AND SYSTEMS 1 LAB\lab 5\lab 5.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Wed May 18 22:47:59 2022
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "lab 5.net"
+
+**** INCLUDING "lab 5.net" ****
+* Schematics Netlist *
+
+
+
+R_R2         0 $N_0001  1  
+R_R3         0 $N_0001  2k  
+R_R1         $N_0002 $N_0001  3k  
+V_V1         $N_0002 0 25V
+
+**** RESUMING "lab 5.cir" ****
+.INC "lab 5.als"
+
+
+
+**** INCLUDING "lab 5.als" ****
+* Schematics Aliases *
+
+.ALIASES
+R_R2            R2(1=0 2=$N_0001 )
+R_R3            R3(1=0 2=$N_0001 )
+R_R1            R1(1=$N_0002 2=$N_0001 )
+V_V1            V1(+=$N_0002 -=0 )
+.ENDALIASES
+
+
+**** RESUMING "lab 5.cir" ****
+.probe
+
+
+.END
+
+**** 05/25/22 21:42:40 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2nd semester\CIRCUIT AND SYSTEMS 1 LAB\lab 5\lab 5.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)     .0083                   ($N_0002)   25.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -8.331E-03
+
+    TOTAL POWER DISSIPATION   2.08E-01  WATTS
+
+
+**** 05/25/22 21:42:40 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\2nd semester\CIRCUIT AND SYSTEMS 1 LAB\lab 5\lab 5.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .03
+
